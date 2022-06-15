@@ -20,3 +20,7 @@ function Footer() {
 }
 
 export default Footer;
+
+// when I started I had to import React to work w/ a react file, like:
+
+// import React from './react'; ----NOT ANYMORE---
