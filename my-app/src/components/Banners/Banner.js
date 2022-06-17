@@ -11,7 +11,6 @@ export default function Banner() {
             <Grid item sx={{ color: '#fff' }}>
                 <Typography variant='h2' fontSize='bold'>
                     your banner!!!
-
                 </Typography>
             </Grid>
         </Grid>
