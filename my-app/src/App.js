@@ -5,12 +5,13 @@ import Header from './components/Header/index.js'
 
 function App() {
   return (
+
     <>
       <Header />
       <Home />
       <Footer />
     </>
-  );
+)
 }
 
 export default App;
