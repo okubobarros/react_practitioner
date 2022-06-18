@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 //   Essa é a base do useState, a syntaxe será essa always - 
 // o que pode mudar estará dentro do que vc espera dentro do parametro, no caso abaixo uma String
 // para ilustrar o exemplo, mas poderia ser uma string vazia, uma array []...
-export default function Banner() {
+export default function Header() {
 
     const [text, setText] = useState('');
 
