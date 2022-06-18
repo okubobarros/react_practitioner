@@ -1,17 +1,17 @@
 import { Grid, Button } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 //   Essa é a base do useState, a syntaxe será essa always - 
 // o que pode mudar estará dentro do que vc espera dentro do parametro, no caso abaixo uma String
 // para ilustrar o exemplo, mas poderia ser uma string vazia, uma array []...
-export default function Header() {
+export default function Exercicio2() {
 
     const [text, setText] = useState('');
 
 
     const [color, setColor] = useState(false)
     // nao estamos usando mas, para vc ver que conforme a necessidade de mudar o estado vc cria um novo useState, tentar dividir a aplicação visualmente
-    const [number, setNumber] = useState();
+    // const [number, setNumber] = useState();
 
     const changeColor = () => {
         setColor(current => !current)

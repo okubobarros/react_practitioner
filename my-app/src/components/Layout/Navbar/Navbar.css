@@ -1,8 +1,8 @@
 .navbar {
-    height: 50 px;
     background-color: #003580;
     display: flex;
     justify-content: center;
+    min-height: 5rem;
 }
 
 .navContainer {

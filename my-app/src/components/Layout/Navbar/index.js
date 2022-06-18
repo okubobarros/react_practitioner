@@ -1,6 +1,7 @@
 import "./Navbar.css"
+// import Menu from './MenuItems';
 
-const Navbar=()=>{
+const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
