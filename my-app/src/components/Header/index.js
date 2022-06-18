@@ -8,29 +8,21 @@ export default function Banner() {
 
     const [text, setText] = useState('');
     // ***********outro useState******************
+    // const colors = ['blue', 'green'];
 
-    const [color, setColor] = useState('black' || colors)
-    const colors = ['blue', 'green']
+    const [color, setColor] = useState(false)
     // nao estamos usando mas, para vc ver que conforme a necessidade de mudar o estado vc cria um novo useState, tentar dividir a aplicação visualmente
     const [number, setNumber] = useState();
 
-    // os eventos que são acionados, passamos uma arrow func para simplificar, no caso não ha necessidade de return ou {}
-    const changeColor = (e) => {
-        e.preventDefault();
-        setColor(colors[Math.floor(Math.random() * colors.length)])
-        console.log('clicou');
-    }
+    const changeColor = () => {
+        setColor(current => !current)
+        console.log('clicou')
+    };
 
     const clickHandler = () => setText('');
 
-    const inputField = (e) => {
-        setText(e.target.value)
-    }
+    const inputField = (e) => setText(e.target.value)
 
-    // podemos escrever assim tb, não ha certo ou errado
-    // function goBack() {
-    //     setText("hi")
-    // }
 
     return (
         <Grid
@@ -39,7 +31,9 @@ export default function Banner() {
             justifyContent='center'
             alignItems='center'
             flexDirection={'column'}
-            sx={{ minHeight: '50VH', bgcolor: color }}>
+            sx={{ minHeight: '50VH', bgcolor: color ? '#f67' : '#876' }}>
+            {/* acima dentro dp SX dentro do JSX vc não usa If and else mas sim ternário */}
+
             <Grid item sx={{ color: '#fff', margin: 'auto' }}>
 
                 <p>React Hooks, useState, bem simplificado para compreensão!</p>
@@ -52,7 +46,7 @@ export default function Banner() {
             <Grid container justifyContent={'center'} gap={3} >
                 <Grid item >
                     <Button variant={'contained'} onClick={changeColor} >
-                        Change
+                        Change bgColor
                     </Button>
                 </Grid>
                 <Grid>
