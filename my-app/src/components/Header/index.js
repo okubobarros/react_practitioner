@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react'
 export default function Banner() {
 
     const [text, setText] = useState('');
-    // ***********outro useState******************
-    // const colors = ['blue', 'green'];
+
 
     const [color, setColor] = useState(false)
     // nao estamos usando mas, para vc ver que conforme a necessidade de mudar o estado vc cria um novo useState, tentar dividir a aplicação visualmente
