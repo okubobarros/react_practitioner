@@ -8,7 +8,7 @@ export default function Home() {
 
     const [caracter, setCaracter] = useState('');
 
-
+    // **********esse hook lida com o efeito colateral, o que antes era o mount, didMount, UnMount do lifecicle
     useEffect(() => {
         fetch(api)
             .then((res) => res.json())
@@ -16,9 +16,8 @@ export default function Home() {
     }, [api])
 
     const { results = [] } = caracter;
-    // console.log(results);
     return (
-        <Grid container alignItems={'center'} justifyContent={'center'} sx={{ bgcolor: 'green', padding: '3rem' }}>
+        <Grid container alignItems={'center'} justifyContent={'center'} sx={{ bgcolor: '#000', padding: '3rem' }}>
 
             {results.map((result, id) => {
                 return (
@@ -32,6 +31,7 @@ export default function Home() {
                             color: 'solid blue  1px'
                         }}
                     >
+                        {/* *********estou importando um component que passa a ser */}
                         <Cards data={result} />
                     </Grid>
                 );
