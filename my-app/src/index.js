@@ -5,12 +5,12 @@ import App from './App';
 
 
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar/Navbar';
+import ResponsiveAppBar from './components/Navbar/Navbar2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Navbar />
+    {/* <ResponsiveAppBar /> */}
     <App />
   </React.StrictMode>
 );
