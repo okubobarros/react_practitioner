@@ -1,4 +1,6 @@
 import { Grid, Button } from '@mui/material'
+import SaveIcon from '@mui/icons-material/Save'
+import DeleteIcon from '@mui/icons-material/Delete'
 import { useState } from 'react'
 
 //   Essa é a base do useState, a syntaxe será essa always - 
@@ -30,7 +32,7 @@ export default function Exercicio2() {
             justifyContent='center'
             alignItems='center'
             flexDirection={'column'}
-            sx={{ minHeight: '50VH', bgcolor: color ? '#f67' : '#876' }}>
+            sx={{ minHeight: '45VH', bgcolor: color ? '#f67' : '#876' }}>
             {/* acima dentro dp SX dentro do JSX vc não usa If and else mas sim ternário */}
 
             <Grid item sx={{ color: '#fff', margin: 'auto' }}>
@@ -44,13 +46,18 @@ export default function Exercicio2() {
 
             <Grid container justifyContent={'center'} gap={3} >
                 <Grid item >
-                    <Button variant={'contained'} onClick={changeColor} >
+                    <Button variant={'contained'} onClick={changeColor} startIcon={<SaveIcon />} >
                         Change bgColor
                     </Button>
                 </Grid>
                 <Grid>
-                    <Button variant={'contained'} onClick={clickHandler} >
+                    <Button variant={'contained'} onClick={clickHandler} startIcon={<DeleteIcon />} >
                         Reset Input
+                    </Button>
+                </Grid>
+                <Grid>  
+                    <Button href="www.google.com" variant={'outlined'} size="large" style={{fontSize: 15}}>
+                        Outlined Button
                     </Button>
                 </Grid>
             </Grid>

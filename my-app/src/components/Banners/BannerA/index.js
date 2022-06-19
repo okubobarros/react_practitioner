@@ -20,7 +20,7 @@ export default function Banner() {
                     //     maxHeight: { xs: 233, md: 167 },
                     //     maxWidth: { xs: 350, md: 250 },
                     // }}
-                    src={'https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'}
+                    src={'https://images.unsplash.com/photo-1638913658179-18c9a9c943f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'}
                 />
             </Grid>
         </Grid>
