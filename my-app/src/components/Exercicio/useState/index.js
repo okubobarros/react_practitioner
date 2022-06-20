@@ -10,6 +10,19 @@ export default function Exercicio2() {
 
     const [text, setText] = useState('');
 
+    const[tarefas, setTarefas] = useState([
+        'Praticar HTML5 e CSS3',
+        'Aprender JavaScript',
+        'Aprender ReactJS'
+    ]); 
+
+    const[input, setInput] = useState("");
+
+    function handleAdd(){
+        setTarefas([... tarefas, input])
+    }
+
+    const[contador, setContador] = useState('0');
 
     const [color, setColor] = useState(false)
     // nao estamos usando mas, para vc ver que conforme a necessidade de mudar o estado vc cria um novo useState, tentar dividir a aplicação visualmente
@@ -41,6 +54,29 @@ export default function Exercicio2() {
                 <h1>React useState, write anything: {text || 'change me'}</h1>
                 <p>Digite um texto</p>
                 <input type='text' onChange={inputField} value={text} />
+
+            </Grid>
+                <div>
+                    <ul>
+                        {tarefas.map(tarefa => (
+                            <li key={tarefa}>{tarefa}</li>
+                        ))}
+                    </ul>
+
+                    <input type="text" value={input} onChange={e => setInput(e.target.value) }/>
+                    <button type="button" onClick={handleAdd}>Adicionar</button>
+
+                </div>
+            <Grid>
+
+            <Grid>
+            <div>
+                <p>You clicked {contador} times</p>
+                <button onClick={() => setContador(contador + 1)}>
+                    Aumentar
+                </button>
+            </div>
+            </Grid>
 
             </Grid>
 
