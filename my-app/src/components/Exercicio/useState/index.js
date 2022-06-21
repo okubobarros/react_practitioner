@@ -1,4 +1,6 @@
 import { Grid, Button } from '@mui/material'
+import SaveIcon from '@mui/icons-material/Save'
+import DeleteIcon from '@mui/icons-material/Delete'
 import { useState } from 'react'
 
 //   Essa é a base do useState, a syntaxe será essa always - 
@@ -8,6 +10,19 @@ export default function Exercicio2() {
 
     const [text, setText] = useState('');
 
+    const[tarefas, setTarefas] = useState([
+        'Praticar HTML5 e CSS3',
+        'Aprender JavaScript',
+        'Aprender ReactJS'
+    ]); 
+
+    const[input, setInput] = useState("");
+
+    function handleAdd(){
+        setTarefas([... tarefas, input])
+    }
+
+    const[contador, setContador] = useState('0');
 
     const [color, setColor] = useState(false)
     // nao estamos usando mas, para vc ver que conforme a necessidade de mudar o estado vc cria um novo useState, tentar dividir a aplicação visualmente
@@ -30,7 +45,7 @@ export default function Exercicio2() {
             justifyContent='center'
             alignItems='center'
             flexDirection={'column'}
-            sx={{ minHeight: '50VH', bgcolor: color ? '#f67' : '#876' }}>
+            sx={{ minHeight: '45VH', bgcolor: color ? '#f67' : '#876' }}>
             {/* acima dentro dp SX dentro do JSX vc não usa If and else mas sim ternário */}
 
             <Grid item sx={{ color: '#fff', margin: 'auto' }}>
@@ -41,16 +56,44 @@ export default function Exercicio2() {
                 <input type='text' onChange={inputField} value={text} />
 
             </Grid>
+                <div>
+                    <ul>
+                        {tarefas.map(tarefa => (
+                            <li key={tarefa}>{tarefa}</li>
+                        ))}
+                    </ul>
+
+                    <input type="text" value={input} onChange={e => setInput(e.target.value) }/>
+                    <button type="button" onClick={handleAdd}>Adicionar</button>
+
+                </div>
+            <Grid>
+
+            <Grid>
+            <div>
+                <p>You clicked {contador} times</p>
+                <button onClick={() => setContador(contador + 1)}>
+                    Aumentar
+                </button>
+            </div>
+            </Grid>
+
+            </Grid>
 
             <Grid container justifyContent={'center'} gap={3} >
                 <Grid item >
-                    <Button variant={'contained'} onClick={changeColor} >
+                    <Button variant={'contained'} onClick={changeColor} startIcon={<SaveIcon />} >
                         Change bgColor
                     </Button>
                 </Grid>
                 <Grid>
-                    <Button variant={'contained'} onClick={clickHandler} >
+                    <Button variant={'contained'} onClick={clickHandler} startIcon={<DeleteIcon />} >
                         Reset Input
+                    </Button>
+                </Grid>
+                <Grid>  
+                    <Button href="www.google.com" variant={'outlined'} size="large" style={{fontSize: 15}}>
+                        Outlined Button
                     </Button>
                 </Grid>
             </Grid>
