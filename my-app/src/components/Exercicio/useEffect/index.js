@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 // meaing you wont see anymore class base component for legacy code is good to understand that way of doing react.
 import Cards from '../../Cards/index'
 export default function Exercicio1() {
-    const api = ('https://rickandmortyapi.com/api/character');
 
+    const api = ('https://rickandmortyapi.com/api/character');
     const [caracter, setCaracter] = useState('');
 
     // **********esse hook lida com o efeito colateral, o que antes era o mount, didMount, UnMount do lifecicle
@@ -13,9 +13,11 @@ export default function Exercicio1() {
         fetch(api)
             .then((res) => res.json())
             .then((data) => setCaracter(data));
-    }, [api])
 
+
+    }, [])
     const { results = [] } = caracter;
+    console.log(results);
     return (
         <Grid container alignItems={'center'} justifyContent={'center'} sx={{ bgcolor: '#000', padding: '3rem' }}>
 
