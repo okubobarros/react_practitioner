@@ -1,5 +1,4 @@
 import "./Navbar.css"
-// import Menu from './MenuItems';
 import { NavLink } from "react-router-dom";
 
 
@@ -12,11 +11,14 @@ const Navbar = () => {
         <NavLink to="/" style={{ color: '#fff' }}>
           Home
         </NavLink>
+        <NavLink to="/service" style={{ color: '#fff' }}>
+          Serviços
+        </NavLink>
         <NavLink to="/about" style={{ color: '#fff' }}>
-          About Us
+          Shipping com a Dale
         </NavLink>
         <NavLink to="/contact" style={{ color: '#fff' }}>
-          Contact Us
+          Company
         </NavLink>
 
         <div className="navItems">
