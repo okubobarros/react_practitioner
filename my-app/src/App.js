@@ -1,25 +1,21 @@
 import './index.css'
 import Home from './views/Home'
 import About from './views/About'
+import Contact from './views/ContactUs'
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom"
+
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
-    </>
+    </div>
   )
 }
+
 export default App;
-
-
-// **********aqui vamos jogar as paginas da View **************

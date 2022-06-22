@@ -4,7 +4,7 @@ import Banner from '../components/Banners/BannerA/index'
 export default function Home() {
     return (
         <>
-            <Exercicio1 />
+            {/* <Exercicio1 /> */}
             <Banner />
             <Exercicio2 />
         </>
