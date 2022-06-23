@@ -4,11 +4,10 @@ import { useEffect, useState } from 'react';
 // meaing you wont see anymore class base component for legacy code is good to understand that way of doing react.
 import Cards from '../../Cards/index';
 import Search from '../../Search/index';
+
 export default function Exercicio1() {
-
-
-    const [caracter, setCaracter] = useState('');
-    let [search, setSearch] = useState("");
+    let [caracter, setCaracter] = useState('');
+    let [search, setSearch] = useState('');
     let [pageNumber, updatePageNumber] = useState(1);
 
     const api = (`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`);
@@ -17,8 +16,6 @@ export default function Exercicio1() {
     //     fetch(api)
     //         .then((res) => res.json())
     //         .then((data) => setCaracter(data));
-
-
     // }, [])
 
     // ***************DOIS FETCHS UM SIMPLES E OUTRO USANDO ASYNC E AWAIT QUE É MAIS MODERNO***********************
@@ -35,19 +32,18 @@ export default function Exercicio1() {
 
     // ABAIXO DESTRUCTURING
     const { results = [] } = caracter;
+    // console.log(results);
+    console.log(search);
 
-    console.log(results);
     return (
-
         // se liga nos Grids é sempre um Grid Container, seguindo de um Item, isso é a boa pratica em MUI
-
         <Grid container alignItems={'center'} justifyContent={'center'}
             sx={{ bgcolor: '#FFF4', padding: '3rem' }}>
             <Grid item xs={12} align={'center'}>
                 {/* Outro component importado tb receber instruções ou props e passa para o component filho */}
                 <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
-
             </Grid>
+
 
             {/* Essa é a Unica maneira de fazer interações em react, a mais usada eu diria, LEMBRA DAS CHAVES, ABAIXO,
             ESTAMOS ENVOLVENDO O JSX NO JAVASCRIPT, ESTAMOS EM JAVASCRIPT LAND******/}
@@ -66,7 +62,6 @@ export default function Exercicio1() {
                         {/* *estou importando um component e passando dentro dele o resultado
                          da chamada de api e populando, PROPS ************/}
                         <Cards data={result} />
-
                     </Grid>
                 );
             })}
