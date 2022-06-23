@@ -1,11 +1,12 @@
 // import Exercicio1 from '../components/Exercicio/useState'
 import Exercicio2 from '../components/Exercicio/useEffect'
-import Banner from '../components/Banners/BannerA/index'
+import BannerB from '../components/Banners/BannerB/index'
+
 export default function Home() {
     return (
         <>
             {/* <Exercicio1 /> */}
-            <Banner />
+            <BannerB />
             <Exercicio2 />
         </>
     )

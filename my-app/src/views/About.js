@@ -4,12 +4,12 @@ import { Grid, Typography, typography } from '@mui/material'
 export default function About() {
     return (
         <Grid container justifyContent={'center'} alignItems={'center'}
-            sx={{ marginTop: '4rem' }}>
+            sx={{ margin: '0  0  0 auto' }}>
             <Grid item textAlign={'center'}>
                 <Typography variant='h3'>
                     Sobre a DaleShip
                 </Typography>
-                <Typography variant='h5'>
+                <Typography variant='h4'>
                     All in one
                 </Typography>
             </Grid>
