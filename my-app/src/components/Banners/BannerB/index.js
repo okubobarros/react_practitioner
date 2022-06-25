@@ -15,11 +15,11 @@ export default function BannerB() {
             }}
         >
 
-            <img
+            {/* <img
                 style={{ display: 'none' }}
                 src={backgroundImage}
                 alt="increase priority"
-            />
+            /> */}
             <Typography color="inherit" align="center" variant="h2" marked="center">
                 Welcome
             </Typography>
@@ -32,7 +32,7 @@ export default function BannerB() {
                 {/* We are DaleShip */}
             </Typography>
             <Button
-                color="secondary"
+                color="primary"
                 variant="contained"
                 size="large"
                 component="a"

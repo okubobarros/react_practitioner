@@ -3,6 +3,7 @@ import { Grid, TextField, Button } from '@mui/material';
 
 // ISSO AQUI É BASICO DE JSON, ESSE E.preventDefault É PARA LIMPAR A PESQUISA 
 const Search = ({ setSearch, updatePageNumber }) => {
+
     let searchBtn = (e) => {
         e.preventDefault();
     };

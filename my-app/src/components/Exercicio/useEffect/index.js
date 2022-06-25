@@ -32,8 +32,9 @@ export default function Exercicio1() {
 
     // ABAIXO DESTRUCTURING
     const { results = [] } = caracter;
-    // console.log(results);
+
     console.log(search);
+    console.log(results);
 
     return (
         // se liga nos Grids é sempre um Grid Container, seguindo de um Item, isso é a boa pratica em MUI
