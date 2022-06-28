@@ -7,17 +7,20 @@ import Search from '../../Search/index';
 
 export default function Exercicio1() {
     let [caracter, setCaracter] = useState('');
+
     let [search, setSearch] = useState('');
+
+    let [species, setSpecies] = useState('');
+
     let [pageNumber, updatePageNumber] = useState(1);
 
-    const api = (`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`);
+    const api = (`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&species=${species}`);
     // **********esse hook lida com o efeito colateral, o que antes era o mount, didMount, UnMount do lifecicle
     // useEffect(() => {
     //     fetch(api)
     //         .then((res) => res.json())
     //         .then((data) => setCaracter(data));
     // }, [])
-
     // ***************DOIS FETCHS UM SIMPLES E OUTRO USANDO ASYNC E AWAIT QUE É MAIS MODERNO***********************
 
     useEffect(() => {
@@ -26,15 +29,10 @@ export default function Exercicio1() {
             setCaracter(data);
         })();
     }, [api]);
-
     // REPARA Q AQUI EU PASSO API DENTRO DOS BRACKETS E NO OUTRO NAO TINHA PASSADO MAS, SE FOSSE USAR AGORA PASSARIA E TEM UMA EXPLICAÇAO PRA ISSO
-
 
     // ABAIXO DESTRUCTURING
     const { results = [] } = caracter;
-
-    console.log(search);
-    console.log(results);
 
     return (
         // se liga nos Grids é sempre um Grid Container, seguindo de um Item, isso é a boa pratica em MUI
@@ -49,9 +47,10 @@ export default function Exercicio1() {
             {/* Essa é a Unica maneira de fazer interações em react, a mais usada eu diria, LEMBRA DAS CHAVES, ABAIXO,
             ESTAMOS ENVOLVENDO O JSX NO JAVASCRIPT, ESTAMOS EM JAVASCRIPT LAND******/}
             {results.map((result, id) => {
+                // let { name, image, species } = result
                 return (
                     <Grid item
-                        spacing={3}
+
                         key={id}
                         style={{
                             display: 'grid',

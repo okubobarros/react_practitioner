@@ -13,7 +13,6 @@ function Copyright() {
                 2002 @DaleShip 🇧🇷. All rights reserved 🌎
             </Link>{' '}
             {new Date().getFullYear()}
-            {'.'}
         </Typography>
     );
 }
@@ -52,15 +51,15 @@ export default function StickyFooter() {
             >
                 <Container maxWidth="sm">
                     <div className="footer-col">
-                    <Typography variant="body1">
-                    DaleShip é a maneira mais fácil para as pessoas enviarem suas mercadorias para o exterior ou oferecer espaço livre no contêiner, caminhão ou navio para milhões de expedidores.
-                    </Typography>
+                        <Typography variant="body1">
+                            DaleShip é a maneira mais fácil para as pessoas enviarem suas mercadorias para o exterior ou oferecer espaço livre no contêiner, caminhão ou navio para milhões de expedidores.
+                        </Typography>
                     </div>
                     <div className="footer-col">
-                    <Typography variant="body1">
-                    Deixe seu e-mail para obter nossa lista de atualização de tecnologia de logística. <br/>
-                    Nós nunca enviaremos spam e você sempre pode cancelar a inscrição facilmente.
-                    </Typography>
+                        <Typography variant="body1">
+                            Deixe seu e-mail para obter nossa lista de atualização de tecnologia de logística. <br />
+                            Nós nunca enviaremos spam e você sempre pode cancelar a inscrição facilmente.
+                        </Typography>
                     </div>
                     <Copyright />
                 </Container>
